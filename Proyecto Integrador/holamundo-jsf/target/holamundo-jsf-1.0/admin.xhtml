@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <title>Administración</title>
+
+</head>
+<body >
+<ui:composition template="./WEB-INF/plantillas/principal_fondo.xhtml">
+    <ui:define name="content">
+        <h:form>
+            <h1 style="color:white">Panel de administración</h1>
+            <p  style="color:white"> Bienvenido #{loginForm.usuario}</p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-dark bg-warning">Menu de opciones</li>
+                <li class="list-group-item"><h:commandLink action="#{loginForm.logout}">Cerrar Sesion</h:commandLink></li>
+            </ul>
+        </h:form>
+    </ui:define></ui:composition>
+</body>
+</html>

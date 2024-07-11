@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <title >Pedidos-hora</title>
+</head>
+<h:body>
+    <ui:composition template="./WEB-INF/plantillas/principal.xhtml">
+        <ui:define name="content">
+            <h2><h:outputText styleClass="text-white" value="Primera consulta"/></h2>
+            <h:form>
+                <h:dataTable value="#{pedidoForm.listarPorHora()}" var="u"
+                             class="table table-striped table-hover table-bordered">
+                    <h:column  headerClass="text-white ">
+                        <f:facet name="header">Fecha_hora</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.hora}"/>
+                    </h:column>
+                    <h:column  headerClass="text-white ">
+                        <f:facet name="header">Cantidad</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.cantidad}"/>
+                    </h:column>
+
+                </h:dataTable>
+                <h:commandButton action="pedidos-hora_2.xhtml?faces-redirect=true" value="Siguiente consulta"
+                                 class="btn btn-primary"></h:commandButton>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

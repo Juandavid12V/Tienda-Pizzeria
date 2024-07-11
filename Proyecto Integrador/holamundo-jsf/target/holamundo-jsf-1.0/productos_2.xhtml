@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <title class="text-white">Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+            type="application/javascript"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js" type="javascript"></script>
+</h:head>
+<h:body>
+    <ui:composition template="./WEB-INF/plantillas/principal_Visitante_F.xhtml">
+        <ui:define name="content">
+            <h2><h:outputText styleClass="text-white" value="Productos"/></h2>
+            <h:form >
+                <h:dataTable value="#{productoForm.listar()}" var="u" class="table table-striped table-hover table-bordered">
+                    <h:column headerClass="text-white ">
+                        <f:facet  name="header">ID</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.id}"/>
+                    </h:column>
+                    <h:column headerClass="text-white ">
+                        <f:facet class="bg-text-white" name="header">Nombre</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.nombre}"/>
+                    </h:column>
+                    <h:column headerClass="text-white ">
+                        <f:facet class="bg-primary" name="header">Precio</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.precio}"/>
+                    </h:column>
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">Descripcion</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.descripcion}"/>
+                    </h:column >
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">imagen</f:facet>
+                        <img src="#{facesContext.externalContext.requestContextPath}/images/#{u.imagenShow}" width="48" height="48" alt=""/>
+                    </h:column>
+
+                </h:dataTable>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

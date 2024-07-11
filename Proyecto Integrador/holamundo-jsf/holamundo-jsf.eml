@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_11" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/${project.build.directory}/classes"/>
+		<excludeFolder url="file://$MODULE_DIR$/${project.build.directory}/test-classes"/>
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<lib name="Maven: javax:javaee-web-api:8.0.1" scope="PROVIDED"/>
+	<lib name="Maven: org.checkerframework:checker-qual:3.5.0" scope="RUNTIME"/>
+	<levels>
+		<level name="Maven: javax:javaee-web-api:8.0.1" value="project"/>
+		<level name="Maven: org.apache.logging.log4j:log4j-api:2.12.0" value="project"/>
+		<level name="Maven: org.xerial:sqlite-jdbc:3.36.0.3" value="project"/>
+		<level name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0" value="project"/>
+		<level name="Maven: org.postgresql:postgresql:42.3.0" value="project"/>
+		<level name="Maven: org.checkerframework:checker-qual:3.5.0" value="project"/>
+		<level name="Maven: org.chartistjsf:ChartistJSF:3.0" value="project"/>
+		<level name="Maven: org.primefaces:primefaces:6.2" value="project"/>
+	</levels>
+</component>

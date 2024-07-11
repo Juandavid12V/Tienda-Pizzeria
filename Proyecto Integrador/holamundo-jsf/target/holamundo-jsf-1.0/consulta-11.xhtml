@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <title>Consualta_9</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+</head>
+<h:body>
+    <ui:composition template="./WEB-INF/plantillas/principal_Consultas.xhtml">
+        <ui:define name="content">
+            <h2><h:outputText styleClass="text-white" value="Tercera consulta"/></h2>
+            <h:form>
+                <h:dataTable value="#{consulta_9Form.listar_4()}" var="u"
+                             class="table table-striped table-hover table-bordered">
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">Nombre empleado</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.nombre_empleado}"/>
+                    </h:column>
+
+                </h:dataTable>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

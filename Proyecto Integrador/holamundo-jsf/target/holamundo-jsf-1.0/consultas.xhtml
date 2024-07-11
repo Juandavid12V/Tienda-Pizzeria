@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+   <title>Consultas</title>
+   <h:outputStylesheet library="css" name="style.css"/>
+</head>
+<body style="text-decoration:none">
+
+<ui:composition template="./WEB-INF/plantillas/principal.xhtml">
+   <ui:define name="content">
+      <div style="  position:center;
+    top:20px;
+    height:1000px;
+    background-size:cover;
+    margin-left:auto;
+    margin-right:auto;">
+
+
+      <div style="position:relative;
+    top:4%;
+    height:50%;
+    width:750px;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:40px;
+    background-color:rgb(2, 2, 2,0.5);
+    background-blend-mode: soft-light;
+    text-align: center;
+
+    -webkit-box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+    box-shadow:  0px 0px 15px 0px rgba(0, 0, 0, .45);
+">
+      <h:form class="form" style="text-decoration:none;">
+         <br>
+         </br>
+         <ul class="list-group " >
+            <li class="list-group-item list-group-item-dark bg-warning text-black">Menu de consultas</li>
+            <li class="list-group-item list-group-item-dark " ><h:commandLink  style="text-decoration:none; color:black " action="consulta-9.xhtml?faces-redirect=tru">Consulta 9</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark" ><h:commandLink style="text-decoration:none; color:black " action="consulta-10.xhtml?faces-redirect=tru">Consulta 10</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none; color:black " action="consulta-11.xhtml?faces-redirect=tru">Consulta 11</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none;color:black  "  action="consulta-12.xhtml?faces-redirect=tru">Consulta 12</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none;color:black  " action="consulta-13.xhtml?faces-redirect=tru">Consulta 13</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none;color:black  " action="consulta-14.xhtml?faces-redirect=tru">Consulta 14</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none;color:black  " action="consulta-15.xhtml?faces-redirect=tru">Consulta 15</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none;color:black  " action="consulta-16.xhtml?faces-redirect=tru">Consulta 16</h:commandLink></li>
+            <li class="list-group-item list-group-item-dark"><h:commandLink style="text-decoration:none;color:black  " action="#{loginForm.logout}">Cerrar Sesion</h:commandLink></li>
+         </ul>
+      </h:form>
+      </div>
+      </div>
+   </ui:define></ui:composition>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+   <title >Administración</title>
+</head>
+<body>
+<ui:composition template="./WEB-INF/plantillas/principal_Usuario.xhtml">
+   <ui:define name="content">
+      <h:form>
+         <h1 style="color:white">Panel de Usuario visitante</h1>
+         <p style="color:white">  Bienvenido #{loginForm.usuario}</p>
+
+      </h:form>
+   </ui:define></ui:composition>
+</body>
+</html>

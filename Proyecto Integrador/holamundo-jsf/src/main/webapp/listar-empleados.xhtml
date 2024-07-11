@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <title >Listado de empleados</title>
+</head>
+<h:body>
+<ui:composition template="./WEB-INF/plantillas/principal.xhtml">
+<ui:define name="content">
+<h2><h:outputText class="text-white" value="Empleados"/></h2>
+<h:form>
+    <h:dataTable value="#{empleadoForm.listar()}" var="u" class="table table-striped table-hover table-bordered">
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Cedula</f:facet>
+            <h:outputText  styleClass="text-white" value="#{u.cedula}"/>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Nombre</f:facet>
+            <h:outputText styleClass="text-white" value="#{u.nombre}"/>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Apellido</f:facet>
+            <h:outputText styleClass="text-white" value="#{u.apellido}"/>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Telefono</f:facet>
+            <h:outputText styleClass="text-white" value="#{u.telefono}"/>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Id_tienda</f:facet>
+            <h:outputText styleClass="text-white" value="#{u.id_tienda}"/>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Id_municipio</f:facet>
+            <h:outputText styleClass="text-white" value="#{u.id_municipio}"/>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Actualizar</f:facet>
+            <h:commandButton action="#{empleadoForm.editar(u.cedula)}" value="editar" class="btn btn-primary">
+            </h:commandButton>
+        </h:column>
+        <h:column  headerClass="text-white ">
+            <f:facet name="header">Eliminar</f:facet>
+            <h:commandButton action="#{empleadoForm.eliminar(u.cedula)}" value="eliminar" class="btn btn-danger">
+            </h:commandButton>
+        </h:column>
+    </h:dataTable>
+
+<h:commandButton action="crear-empleados.xhtml?faces-redirect=true" value="Crear Nuevo Empleado"
+                 class="btn btn-success"></h:commandButton>
+</h:form>
+</ui:define>
+</ui:composition>
+</h:body>
+</html>

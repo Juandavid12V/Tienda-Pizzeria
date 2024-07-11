@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <title>Crear tienda</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+          type="application/javascript"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js" type="javascript"></script>
+</h:head>
+<h:outputStylesheet library="css" name="style.css"/>
+<h:body class="fondo_4">
+    <ui:composition template="./WEB-INF/plantillas/principal_Editar.xhtml">
+    <ui:define name="content">
+ <div id="bg">
+   <h:form id="form" class="form-horizontal">
+    <div class="form-group">
+      <div class="col-sm-4"></div>
+      <div  class="col-sm-4">
+        <h2 style="text-align: center; color:white">Datos de tienda</h2>
+      </div>
+    </div>
+    <hr/>
+    <div class="form-group">
+      <h:outputLabel  style="color:white" for="direccion" class="control-label col-sm-4">Direccion</h:outputLabel>
+      <div class="col-sm-4">
+        <h:inputText id="direccion" value="#{tiendaForm.editar_tienda.direccion}" class="form-control"
+                     validatorMessage="User name is required">
+          <f:validateRequired />
+        </h:inputText>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="col-sm-2">
+          <h:commandButton value="Guardar" action="#{tiendaForm.guardar_edi()}" class="btn btn-success"
+                           style="width: 80px;margin-top:20px;"></h:commandButton>
+            <h:commandButton action="tiendas.xhtml?faces-redirect=true" value="Volver"
+                             class="btn btn-primary" style="width: 120px;height:40px;font-weight:bold; margin-top:-320px; margin-left: 1000px; background-color:red; position: absolute"></h:commandButton>
+
+
+        </div>
+        <div class="col-sm-1">
+        </div>
+      </div>
+    </div>
+
+   </h:form>
+ </div>
+    </ui:define>
+    </ui:composition>
+</h:body>
+</html>

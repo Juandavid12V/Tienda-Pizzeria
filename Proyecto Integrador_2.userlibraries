@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: javax:javaee-web-api:8.0.1">
+    <archive path="C:/Users/Juan David/.m2/repository/javax/javaee-web-api/8.0.1/javaee-web-api-8.0.1.jar" />
+  </library>
+  <library name="Maven: org.apache.logging.log4j:log4j-api:2.12.0">
+    <archive path="C:/Users/Juan David/.m2/repository/org/apache/logging/log4j/log4j-api/2.12.0/log4j-api-2.12.0.jar" />
+  </library>
+  <library name="Maven: org.xerial:sqlite-jdbc:3.36.0.3">
+    <archive path="C:/Users/Juan David/.m2/repository/org/xerial/sqlite-jdbc/3.36.0.3/sqlite-jdbc-3.36.0.3.jar" />
+  </library>
+  <library name="Maven: jakarta.servlet:jakarta.servlet-api:5.0.0">
+    <archive path="C:/Users/Juan David/.m2/repository/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar" />
+  </library>
+  <library name="Maven: org.postgresql:postgresql:42.3.0">
+    <archive path="C:/Users/Juan David/.m2/repository/org/postgresql/postgresql/42.3.0/postgresql-42.3.0.jar" />
+  </library>
+  <library name="Maven: org.checkerframework:checker-qual:3.5.0">
+    <archive path="C:/Users/Juan David/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar" />
+  </library>
+  <library name="Maven: org.chartistjsf:ChartistJSF:3.0">
+    <archive path="C:/Users/Juan David/.m2/repository/org/chartistjsf/ChartistJSF/3.0/ChartistJSF-3.0.jar" />
+  </library>
+  <library name="Maven: org.primefaces:primefaces:6.2">
+    <archive path="C:/Users/Juan David/.m2/repository/org/primefaces/primefaces/6.2/primefaces-6.2.jar" />
+  </library>
+</eclipse-userlibraries>
+

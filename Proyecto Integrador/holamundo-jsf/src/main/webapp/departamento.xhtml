@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+    <title >Departamentos</title>
+</head>
+<h:body>
+    <ui:composition template="./WEB-INF/plantillas/principal.xhtml">
+        <ui:define name="content">
+            <h2><h:outputText styleClass="text-white" value="Departamentos"/></h2>
+
+            <h:form>
+                <h:dataTable value="#{departamentosForm.listar()}" var="u"
+                             class="table table-striped table-hover table-bordered">
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">ID</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.id}"/>
+                    </h:column>
+
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">Nombre</f:facet>
+                        <h:outputText styleClass="text-white" value="#{u.nombre}"/>
+                    </h:column>
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">Actualizar</f:facet>
+                        <h:commandButton action="#{departamentosForm.editar(u.id)}" value="editar" class="btn btn-primary">
+                        </h:commandButton>
+                    </h:column>
+                    <h:column headerClass="text-white ">
+                        <f:facet name="header">Eliminar</f:facet>
+                        <h:commandButton action="#{departamentosForm.eliminar(u.id)}" value="eliminar" class="btn btn-danger">
+                        </h:commandButton>
+                    </h:column>
+
+                </h:dataTable>
+                <h:commandButton action="crear-departamento.xhtml?faces-redirect=true" value="Crear Nuevo Departamento"
+                                 class="btn btn-success"></h:commandButton>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

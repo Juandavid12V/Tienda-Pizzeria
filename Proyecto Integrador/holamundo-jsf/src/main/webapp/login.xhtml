@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <title>Login</title>
+    <h:outputStylesheet library="css" name="style.css"/>
+
+</h:head>
+<body class="fondo">
+<div id="bg">
+    <div class="module">
+        <h2 style="color:white" class="fs-title">Autenticación</h2>
+        <h3 style="color:white" class="fs-subtitle">Ingrese usuario y contraseña</h3>
+        <h:form class="form">
+
+            <h:inputText id="usuario" value="#{loginForm.usuario}" class="textbox" style="color:white" a:placeholder="Usuario"  autocomplete="off"/>
+
+            <h:inputSecret id="password" value="#{loginForm.password}" class="textbox" style="color:white" a:placeholder="Contraseña"/>
+
+            <h:commandButton action="#{loginForm.validarUsuario}" value="Iniciar Sesion"  class="button"/>
+            <h4 class="fs-registrar">¿No tienes una cuenta?</h4>
+            <h:commandLink class="fs-cuenta" action="crear-visitante?faces-redirect=true">Registrate</h:commandLink>
+        </h:form>
+    </div>
+</div>
+</body>
+</html>
